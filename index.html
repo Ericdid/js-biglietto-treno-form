@@ -23,7 +23,27 @@
     </header>
     <main>
       <section class="d-flex flex-column">
-        <div class="container ms-style mt-5"></div>
+        <div class="container ms-style mt-5 d-flex g-5">
+          <div class="box">
+            <label for="Username"
+              ><strong>inserisci il tuo nome e cognome</strong></label
+            >
+            <input type="text" name="Username" placeholder="nome e cognome" />
+          </div>
+          <div class="box">
+            <label for="distance"
+              ><strong>inserisci la distanza da percorrere</strong></label
+            >
+            <input type="text" name="distance" placeholder="distanza in Km" />
+          </div>
+          <div class="box">
+            <label for="Userage"><strong>inserisci la tua età</strong></label>
+            <input type="text" name="Userage" placeholder="La tua Età" />
+          </div>
+        </div>
+        <div class="container d-flex justify-content-center pt-5">
+          <button class="ms_button btn btn-warning">Calcola!</button>
+        </div>
         <div class="container ms-style mt-5"></div>
       </section>
     </main>

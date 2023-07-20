@@ -27,3 +27,17 @@ body {
   align-items: center;
   gap: 15px;
 }
+.ms-price {
+  width: 91px;
+  height: 38px;
+  line-height: 38px;
+  background-color: #ffffff;
+  color: #586aea;
+  padding-left: 10px;
+}
+
+/* debug */
+.my-dbg {
+  border: 1px solid darkred;
+  background-color: white;
+}

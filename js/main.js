@@ -32,5 +32,5 @@ calcPrice.addEventListener(`click`, function () {
   console.log(TicketPrice);
   // genero il prezzo nella pagina
 
-  pricelog.innerHTML = TicketPrice;
+  pricelog.innerHTML = "€ " + TicketPrice;
 });

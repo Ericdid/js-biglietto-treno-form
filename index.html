@@ -28,22 +28,39 @@
             <label for="Username"
               ><strong>inserisci il tuo nome e cognome</strong></label
             >
-            <input type="text" name="Username" placeholder="nome e cognome" />
+            <input
+              type="text"
+              name="Username"
+              placeholder="nome e cognome"
+              id="UsernameInput"
+            />
           </div>
           <div class="box">
             <label for="distance"
               ><strong>inserisci la distanza da percorrere</strong></label
             >
-            <input type="text" name="distance" placeholder="distanza in Km" />
+            <input
+              type="text"
+              name="distance"
+              placeholder="distanza in Km"
+              id="DistanceInput"
+            />
           </div>
           <div class="box">
             <label for="Userage"><strong>inserisci la tua età</strong></label>
-            <input type="text" name="Userage" placeholder="La tua Età" />
+            <input
+              type="text"
+              name="Userage"
+              placeholder="La tua Età"
+              id="UserAgeInput"
+            />
           </div>
         </div>
         <div class="container d-flex justify-content-center pt-5 ms-box">
-          <button class="ms_button btn btn-warning">Calcola!</button>
-          <div class="ms-price"></div>
+          <button class="ms_button btn btn-warning" id="calcprice">
+            Calcola!
+          </button>
+          <div class="ms-price" id="price-log"></div>
         </div>
       </section>
     </main>

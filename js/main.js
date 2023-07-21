@@ -1,37 +1,29 @@
-// (vislizza numeri fino ai decimali)
-function toFixedIfNecessary(value, dp) {
-  return +parseFloat(value).toFixed(dp);
-}
+// raccolgo elementi di interesse e li metto nelle costanti
 
-// - chiedere la distanza da percorrere
-const Distance = parseInt(`Distanza Da Percorrere`);
-console.log("distanza da percorrere : " + Distance + "km");
+const usernameInput = document.getElementById(`UsernameInput`);
+const distanceImput = document.getElementById(`DistanceInput`);
+const ageInput = document.getElementById(`UserAgeInput`);
+const calcPrice = document.getElementById(`calcprice`);
 
-// - chiedere l età
-const Userage = parseInt(`inserisci la tua età`);
-console.log("età del passeggero : " + Userage);
+// aggiungo event listener
 
-// - il prezzo del biglietto è definito in base ai km (0.21 € al km)
-const Price = 0.21;
+calcPrice = addEventListener(`click`, function () {
+  // leggo il valore degli input
+  const NameSurname = usernameInput.value;
+  const Kilometers = distanceImput.value;
+  const AgeOf = ageInput.value;
 
-let totalprice = Distance * Price;
-console.log("prezzo tratta : " + toFixedIfNecessary(totalprice, 2) + "€");
+  // console.log(NameSurname, Kilometers, AgeOf);
 
-// - va applicato uno sconto del 20% per i minorenni
-if (Userage < 18) {
-  discountund = totalprice - (totalprice * 20) / 100;
-  console.log(
-    "prezzo tratta con sconto minori : " +
-      toFixedIfNecessary(discountund, 2) +
-      "€"
-  );
-}
-// va applicato uno sconto del 40% per gli over 65.
-if (Userage > 65) {
-  discountovr = totalprice - (totalprice * 40) / 100;
-  console.log(
-    "prezzo tratta con sconto anziani : " +
-      toFixedIfNecessary(discountovr, 2) +
-      "€"
-  );
-}
+  // calcolo il valore del biglietto
+
+  const TicketFare = 0.21;
+  let TicketPrice = TicketFare * Kilometers;
+
+  if (AgeOf < 18) {
+    TicketPrice *= 0.8;
+  } else if (AgeOf > 65) {
+    TicketPrice *= 0.6;
+  }
+  console.log(TicketPrice);
+});

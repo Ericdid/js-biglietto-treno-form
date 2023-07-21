@@ -5,9 +5,13 @@ const distanceImput = document.getElementById(`DistanceInput`);
 const ageInput = document.getElementById(`UserAgeInput`);
 const calcPrice = document.getElementById(`calcprice`);
 
+// Price Log
+
+const pricelog = document.getElementById("price-log");
+
 // aggiungo event listener
 
-calcPrice = addEventListener(`click`, function () {
+calcPrice.addEventListener(`click`, function () {
   // leggo il valore degli input
   const NameSurname = usernameInput.value;
   const Kilometers = distanceImput.value;
@@ -26,4 +30,7 @@ calcPrice = addEventListener(`click`, function () {
     TicketPrice *= 0.6;
   }
   console.log(TicketPrice);
+  // genero il prezzo nella pagina
+
+  pricelog.innerHTML = TicketPrice;
 });
